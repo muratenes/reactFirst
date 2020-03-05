@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Button} from 'react-native';
+import ContactList from "../components/ContactList";
 
 export default class Contacts extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Contacts</Text>
+                <ContactList navigation={this.props.navigation}/>
             </View>
         );
     }
@@ -14,8 +15,5 @@ export default class Contacts extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems : 'center'
-
     }
 });
